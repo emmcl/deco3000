@@ -1,13 +1,9 @@
-# Import streamlit for our interface
 import streamlit as st
-
-# We need these for the wordware POST request
-import json
-import requests 
-
-# We need these to get our API_KEY
+from datetime import datetime
 import os
 from dotenv import load_dotenv
+import json
+import requests 
 
 ###############################################################################################################################
 
@@ -51,38 +47,52 @@ def wordware(inputs, prompt_id, api_key):
 ###############################################################################################################################
 
 # Use streamlit to give us text and number inputs
-subject = st.text_input(
-    "Enter your subject",
-)
+# Create a form
+form = st.form("my_form")
 
-topic = st.text_input(
-    "Enter your topic",
-)
+# Input fields inside the form
+location = form.text_input("Enter your location address")
+start_date = form.date_input("Start Date")
+end_date = form.date_input("End Date")
 
-months = st.number_input(
-    "Enter the number of months", step=1, min_value=1, max_value=12
-)
+# Add a submit button to the form
+submitted = form.form_submit_button("Submit")
+
+# Perform actions after form submission
+if submitted:
+    # Validate that a location is provided
+    # if location:
+    #     # Get transportation authority info from OpenAI
+    #     # transport_info = 
+    #     st.write(f"Transportation information for {location}: {transport_info}")
+    # else:
+        st.write("Please enter a location.")
+
+# Calculate the number of days between the dates, including the final day
+if start_date and end_date:
+    delta_days = (end_date - start_date).days + 1
+    st.write(f"The number of days for the trip is: {delta_days}")
+else:
+    st.write("Please select both start and end dates.")
+
+# Display additional information
+st.write(f"Trip duration: {delta_days} days")
+st.write(f"location: {location}")
 
 
-prompt_id = "c1f25533-7cb9-48f6-bbe5-4827e8d19df9"
+prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
 # this is our course planning example from last week. Example inputs below:
-'''
-"inputs": {
-    "subject": "Software engineering",
-    "topic": "Database management with Postgres",
-    "months": "6",
-}
-'''
+
 
 # We need to grab our api-key from .env
 load_dotenv()
 api_key = os.getenv('API_KEY')
 
-if subject and topic and months:
-    st.write("Your inputs: ", subject, topic, months)
-    inputs = {"subject": subject, "topic": topic, "months": str(months)}
+if location and start_date and end_date:
+    st.write("Your inputs: ", location, start_date, end_date)
+    inputs = {"Location": location, "start_date": start_date, "end_date": str(end_date)}
     result = st.button(
-        "Start plan",
+        "Submit",
         on_click=wordware,
         args=(
             inputs,
@@ -90,3 +100,4 @@ if subject and topic and months:
             api_key,
         ),
     )
+
