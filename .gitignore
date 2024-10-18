@@ -1,35 +1,8 @@
-# Byte-compiled files
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Environment and dependency files
+# Environments
 .env
+.venv/
+env/
 venv/
-*.egg-info/
-
-# Logs
-*.log
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Ignore specific IDE/editor settings
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Ignore data and output files
-*.csv
-*.dat
-*.sqlite3
-
-# Ignore compiled code or temporary builds
-*.so
-*.dll
-*.exe
+ENV/
+env.bak/
+venv.bak/
