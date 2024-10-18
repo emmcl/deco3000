@@ -3,7 +3,7 @@ from datetime import date
 import os
 from dotenv import load_dotenv
 import json
-import requests 
+import requests
 
 ###############################################################################################################################
 
@@ -18,20 +18,21 @@ def wordware(inputs, prompt_id, api_key):
     if response.status_code != 200:
         st.error(f"Request failed with status code {response.status_code}: {response.text}")
     else:
+        generation_output = ""  # Store only the relevant 'new_generation' output
         for line in response.iter_lines():
             if line:
                 content = json.loads(line.decode("utf-8"))
                 value = content["value"]
-                if value["type"] == "generation":
-                    if value["state"] == "start":
-                        st.write("\nNEW GENERATION -", value["label"])
-                    else:
-                        st.write("\nEND GENERATION -", value["label"])
-                elif value["type"] == "chunk":
-                    st.write(value["value"], end="")
-                elif value["type"] == "outputs":
-                    st.write("\nFINAL OUTPUTS:")
-                    st.json(value)
+                
+                # Extract and store the 'new_generation' output
+                if value["type"] == "outputs":
+                    generation_output = value["values"].get("new_generation", "No generation found")
+        
+        # Display the 'new_generation' output in the Streamlit interface
+        if generation_output:
+            st.write(generation_output)
+        else:
+            st.warning("No valid generation found in the response.")
 
 ###############################################################################################################################
 
@@ -51,7 +52,6 @@ end_date = form.date_input("End Date")
 trip_length = None
 if start_date and end_date:
     trip_length = str((end_date - start_date).days + 1)
-    st.write(f"The number of days for the trip is: {trip_length}")
 else:
     st.write("Please select both start and end dates.")
 
@@ -67,17 +67,8 @@ if submit_button:
             "Prompt": f"Based on {location}, determine the name of the relevant transportation authority and the base URL for their public transport information."
         }
 
-        st.write("Sending the following inputs to the API:")
-        st.json(inputs)  # Log the inputs for debugging
-        wordware(inputs, prompt_id, api_key)  # Call the API
+        # Call the API and display only the generation output
+        wordware(inputs, prompt_id, api_key)
     else:
         st.warning("Please fill in the location and select valid start and end dates.")
 
-# Display additional information
-if trip_length:
-    st.write(f"Trip duration: {trip_length} days")
-if location:
-    st.write(f"Location: {location}")
-
-if location and start_date and end_date:
-    st.write("Your inputs:", location, start_date, end_date)
