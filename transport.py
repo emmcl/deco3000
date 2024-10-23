@@ -51,8 +51,50 @@ prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
 # Create a form
 form = st.form("my_form")
 
-# Input fields inside the form
-location = form.text_input("Enter your location address")
+
+
+country = form.selectbox (
+    "Country",
+    ("Australia"),
+    index=None,
+    placeholder="Select a country",
+)
+state = form.selectbox (
+    "State",
+    ("New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", 
+     "Western Australia", "South Australia", "Northern Terrirotry"),
+     index=None,
+     placeholder="Select a state"
+)
+
+# # Input fields inside the form
+# country = form.selectbox (
+#     "Country",
+#     options=["Australia", "New Zealand"],
+#     index=None,
+#     placeholder="Select a country",
+# )
+
+# state = None
+
+# if country == "Australia":
+#     state_options = "New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Terrirotry"
+# elif country == "New Zealand":
+#     state_options = "Auckland", "Wellington", "Nelson", "Canterbury", "New Plymouth", "Hawke's Bay", "Marlbourough", "Westland", "Otago", "Southland"
+# else:
+#     state_options = []
+
+# if country:
+#     state = form.selectbox (
+#         "State/Province", options=state_options,
+#         index=None,
+#         placeholder="Select a region",
+#     )
+# else:
+#     state = None
+
+
+address = form.text_input("Enter your location street address")
 start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
 
@@ -68,23 +110,36 @@ else:
 
 # Prepare inputs only if the values are valid
 if submit_button:
-    if location and trip_length:
-        if location.strip() == "" or trip_length.strip() == "":
+    # Check if country and state are valid selections
+    if country == "Select a country" or state in ["Select a state", "Select a region"]:
+        st.warning("Please select a valid country and state/region.")
+    # Check if location and trip length are provided
+    elif address and trip_length:
+        if address.strip() == "" or trip_length.strip() == "":
             st.error("Location or trip length cannot be empty.")
         else:
             inputs = {
-                "location": location,
+                # i think we should change this to address instead of location
+                "location": address, 
+                # "state": state
+                # "country": country
                 "trip_length": trip_length,
                 "version": "^3.4"  # Add the version information here
+
             }
             # Call the API and display the generation output
             wordware(inputs, prompt_id, api_key)
     else:
         st.warning("Please fill in the location and select valid start and end dates.")
 
+
 # Google Custom Search API details
 GOOGLE_API_KEY = 'AIzaSyCtuZIOZzwyEAxvjqa9FijiUhLP7Qedplo'
 SEARCH_ENGINE_ID = 'd212ba4f3a000451c'
+
+
+
+
 
 def get_image_url(query):
     # Modify the query to be more specific
@@ -103,14 +158,14 @@ def get_image_url(query):
         return None
 
 if submit_button:
-    if location:        
+    if address:        
         # Get the image URL
-        image_url = get_image_url(location)
+        image_url = get_image_url(address)
         
         if image_url:
             # Display the image
-            st.subheader(f"{location} Transport Ticketing System", divider="gray")
-            st.image(image_url, caption=f"Image of {location}", use_column_width=True)
+            st.subheader(f"{address} Transport Ticketing System", divider="gray")
+            st.image(image_url, caption=f"Image of {address}", use_column_width=True)
         else:
             st.write("No image found for the location.")
 
