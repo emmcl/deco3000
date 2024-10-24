@@ -52,19 +52,20 @@ prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
 form = st.form("my_form")
 
 
+address = form.text_input("Enter your location street address")
 
-country = form.selectbox (
-    "Country",
-    ("Australia"),
-    index=None,
-    placeholder="Select a country",
-)
 state = form.selectbox (
     "State",
     ("New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", 
      "Western Australia", "South Australia", "Northern Terrirotry"),
      index=None,
      placeholder="Select a state"
+)
+country = form.selectbox (
+    "Country",
+    ("Australia"),
+    index=None,
+    placeholder="Select a country",
 )
 
 # # Input fields inside the form
@@ -94,7 +95,7 @@ state = form.selectbox (
 #     state = None
 
 
-address = form.text_input("Enter your location street address")
+
 start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
 
