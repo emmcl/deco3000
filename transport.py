@@ -51,18 +51,23 @@ prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
 # Create a form
 form = st.form("my_form")
 
-address = form.text_input("Enter your location street address")
+address = form.text_input("Enter your location street address", 
+    placeholder="eg. 38 Princes Hwy, St Peters")
 
 state = form.selectbox(
     "Select a State",
-    ["", "New South Wales", "Victoria", "ACT", "Queensland", 
+    ["New South Wales", "Victoria", "ACT", "Queensland", 
      "Tasmania", "Western Australia", "South Australia", 
      "Northern Territory"],
+    index=None,
+    placeholder="eg. New South Wales"
 )
 
 country = form.selectbox(
     "Select a Country",
-    ["", "Australia"],
+    ["Australia"],
+    index=None,
+    placeholder="eg. Australia"
 )
 
 start_date = form.date_input("Start Date")
@@ -77,6 +82,11 @@ international_domestic = form.radio(
     "Are you domestic or internation?",
     ["Domestic", "International"]
 )
+
+interests = form.text_input("What do you like doing?", 
+    placeholder="eg. hiking, museums, restaurants")
+planned_locations = form.text_input("Is there any specific destinations you have planned", 
+    placeholder="eg. SEALIFE Sydney Aquarium")
 
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
