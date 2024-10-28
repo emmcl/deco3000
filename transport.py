@@ -7,7 +7,7 @@ import requests
 
 # Load environment variables from the .env file
 load_dotenv()
-api_key = os.getenv('API_KEY')
+api_key = os.getenv('WORDWARE_API_KEY')
 
 def wordware(inputs, prompt_id, api_key):
     response = requests.post(
@@ -51,56 +51,44 @@ prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
 # Create a form
 form = st.form("my_form")
 
-
 address = form.text_input("Enter your location street address")
 
-state = form.selectbox (
-    "State",
-    ("New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", 
-     "Western Australia", "South Australia", "Northern Terrirotry"),
-     index=None,
-     placeholder="Select a state"
-)
-country = form.selectbox (
-    "Country",
-    ("Australia"),
-    index=None,
-    placeholder="Select a country",
+state = form.selectbox(
+    "Select a State",
+    ["", "New South Wales", "Victoria", "ACT", "Queensland", 
+     "Tasmania", "Western Australia", "South Australia", 
+     "Northern Territory"],
 )
 
-# # Input fields inside the form
-# country = form.selectbox (
-#     "Country",
-#     options=["Australia", "New Zealand"],
-#     index=None,
-#     placeholder="Select a country",
-# )
-
-# state = None
-
-# if country == "Australia":
-#     state_options = "New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Terrirotry"
-# elif country == "New Zealand":
-#     state_options = "Auckland", "Wellington", "Nelson", "Canterbury", "New Plymouth", "Hawke's Bay", "Marlbourough", "Westland", "Otago", "Southland"
-# else:
-#     state_options = []
-
-# if country:
-#     state = form.selectbox (
-#         "State/Province", options=state_options,
-#         index=None,
-#         placeholder="Select a region",
-#     )
-# else:
-#     state = None
-
-
+country = form.selectbox(
+    "Select a Country",
+    ["", "Australia"],
+)
 
 start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
 
+ticket_type = form.radio(
+    "Traveller Type",
+    ["Adult", "Student", "Senior/Pensioner"]
+)
+
+international_domestic = form.radio(
+    "Are you domestic or internation?",
+    ["Domestic", "International"]
+)
+
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
+# Display submitted data
+if submit_button:
+    st.write("Address:", address)
+    st.write("State:", state)
+    st.write("Country:", country)
+    st.write("Start Date:", start_date)
+    st.write("End Date:", end_date)
+    st.write("Traveller Type:", ticket_type)
+    st.write("International or Domestic:", international_domestic)
 
 # Calculate the number of days between the dates
 trip_length = None
@@ -121,9 +109,9 @@ if submit_button:
         else:
             inputs = {
                 # i think we should change this to address instead of location
-                "location": address, 
-                # "state": state
-                # "country": country
+                "address": address,
+                "state": state,
+                "country": country,
                 "trip_length": trip_length,
                 "version": "^3.4"  # Add the version information here
 
@@ -135,16 +123,19 @@ if submit_button:
 
 
 # Google Custom Search API details
-GOOGLE_API_KEY = 'AIzaSyCtuZIOZzwyEAxvjqa9FijiUhLP7Qedplo'
+load_dotenv()
+GOOGLE_API_KEY  = os.getenv('GOOGLE_API_KEY')
 SEARCH_ENGINE_ID = 'd212ba4f3a000451c'
 
 
 
 
 
-def get_image_url(query):
+def get_image_url(state):
     # Modify the query to be more specific
-    specific_query = f"public transport ticketing in {query}"
+    # specific_query = f"public transport tickets for {state} in {country} in 2024"
+    # specific_query = f"{state} public transport card"
+    specific_query = f"transport {state} travel card"
     url = f"https://www.googleapis.com/customsearch/v1?q={specific_query}&cx={SEARCH_ENGINE_ID}&key={GOOGLE_API_KEY}&searchType=image&num=1"
     
     # Send request to Google Custom Search API
@@ -159,14 +150,14 @@ def get_image_url(query):
         return None
 
 if submit_button:
-    if address:        
+    if state:        
         # Get the image URL
-        image_url = get_image_url(address)
+        image_url = get_image_url(state)
         
         if image_url:
             # Display the image
-            st.subheader(f"{address} Transport Ticketing System", divider="gray")
-            st.image(image_url, caption=f"Image of {address}", use_column_width=True)
+            st.subheader(f"{state} Transport Ticketing System", divider="gray")
+            st.image(image_url, caption=f"Image of {state}", use_column_width=True)
         else:
             st.write("No image found for the location.")
 
