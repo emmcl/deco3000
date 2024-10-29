@@ -1,0 +1,378 @@
+{
+    "New South Wales": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/NSW/nsw_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "NSW Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/NSW/nsw_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "NSW Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/NSW/nsw_concession.png"
+                ],
+                "ticket_names": [
+                    "NSW Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/NSW/nsw_senior.png"
+                ],
+                "ticket_names": [
+                    "NSW Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/nsw_use.jpg"
+    },
+    "Victoria": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/VIC/vic_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "VIC Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/VIC/vic_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "VIC Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/VIC/concession.png"
+                ],
+                "ticket_names": [
+                    "VIC Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/VIC/vic_senior.png"
+                ],
+                "ticket_names": [
+                    "VIC Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/vic_use.avif"
+    },
+    "Queensland": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/QLD/qld_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "QLD Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/QLD/qld_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "QLD Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/QLD/concession.jpeg"
+                ],
+                "ticket_names": [
+                    "QLD Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/QLD/qld_senior.png"
+                ],
+                "ticket_names": [
+                    "QLD Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/qld_use.png"
+    },
+    "Western Australia": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/WA/wa_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "WA Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/WA/wa_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "WA Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/WA/concession.jpg"
+                ],
+                "ticket_names": [
+                    "WA Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/WA/wa_senior.jpg"
+                ],
+                "ticket_names": [
+                    "WA Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/wa_use.jpeg"
+    },
+    "South Australia": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/SA/sa_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "SA Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/SA/sa_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "SA Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/SA/concession.png"
+                ],
+                "ticket_names": [
+                    "SA Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/SA/sa_senior.png"
+                ],
+                "ticket_names": [
+                    "SA Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/sa_use.jpg"
+    },
+    "Tasmania": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/TAS/tas_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "TAS Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/TAS/tas_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "TAS Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/TAS/concession.png"
+                ],
+                "ticket_names": [
+                    "TAS Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/TAS/tas_senior.png"
+                ],
+                "ticket_names": [
+                    "TAS Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/tas_use.png"
+    },
+    "Northern Territory": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/NT/nt_adult.jpeg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "NT Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/NT/nt_adult.jpeg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "NT Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/NT/concession.jpg"
+                ],
+                "ticket_names": [
+                    "NT Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/NT/nt_senior.jpeg"
+                ],
+                "ticket_names": [
+                    "NT Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/nt_use.png"
+    },
+    "Australian Capital Territory": {
+        "international": {
+            "adult": {
+                "images": [
+                    "images/ACT/act_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "ACT Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/ACT/act_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "ACT Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/ACT/concession.png"
+                ],
+                "ticket_names": [
+                    "ACT Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/ACT/act_senior.png"
+                ],
+                "ticket_names": [
+                    "ACT Senior Ticket"
+                ]
+            }
+        },
+        "ticket_machine_image": "images/act_use.jpg"
+    }
+}

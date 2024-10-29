@@ -5,6 +5,10 @@ from dotenv import load_dotenv
 import json
 import requests
 
+# Load config.json
+with open('config.json', 'r') as file:
+    config = json.load(file)
+
 # Load environment variables from the .env file
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
@@ -73,25 +77,25 @@ country = form.selectbox(
 start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
 
-ticket_type = form.radio(
-    "Traveller Type",
-    ["Adult", "Student", "Senior/Pensioner"],
-    index=None
-)
-
 travel_type = form.radio(
     "Are you domestic or internation?",
     ["Domestic", "International"], 
     index=None
 )
 
+ticket_type = form.radio(
+    "Traveller Type",
+    ["Adult", "Student", "Senior/Pensioner"],
+    index=None
+)
+
 interests = form.text_input("What do you like doing?", 
     placeholder="eg. hiking, museums, restaurants")
+
 planned_locations = form.text_input("Is there any specific destinations you have planned", 
     placeholder="eg. SEALIFE Sydney Aquarium")
 
-#Expand this to be nesting ifs for card types and generate image 
-ticket_name = "Opal Adult"
+ticket_name = "Opal"
 
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
@@ -102,8 +106,8 @@ if submit_button:
     st.write("Country:", country)
     st.write("Start Date:", start_date)
     st.write("End Date:", end_date)
-    st.write("Traveller Type:", ticket_type)
-    st.write("International or Domestic:", travel_type)
+    st.write("Ticket Type:", ticket_type)
+    st.write("Travel Type:", travel_type)
     st.write("Interests:", interests)
     st.write("Planned Locations:", planned_locations)
 
@@ -114,6 +118,42 @@ if start_date and end_date:
     trip_length = str((end_date - start_date).days + 1)
 else:
     st.write("Please select both start and end dates.")
+
+
+# from chattie 
+
+images = []
+ticket_names = []
+
+# Access the images and ticket names based on inputs
+if travel_type == "International":
+    if ticket_type == "Adult":
+        images = config[state]["international"]["adult"]["images"]
+        ticket_names = config[state]["international"]["adult"]["ticket_names"]
+    # Handle other cases (Student, Senior) as needed
+
+elif travel_type == "Domestic":
+    if ticket_type == "Adult":
+        images = config[state]["domestic"]["adult"]["images"]
+        ticket_names = config[state]["domestic"]["adult"]["ticket_names"]
+    elif ticket_type == "Student":
+        images = config[state]["domestic"]["student"]["images"]
+        ticket_names = config[state]["domestic"]["student"]["ticket_names"]
+    elif ticket_type == "Senior":
+        images = config[state]["domestic"]["senior"]["images"]
+        ticket_names = config[state]["domestic"]["senior"]["ticket_names"]
+
+# Display the results in Streamlit
+if images:
+    st.image(images, caption=ticket_names)
+else:
+    st.write("No images found for the selected criteria.")
+
+
+
+
+
+
 
 # Prepare inputs only if the values are valid
 if submit_button:
@@ -143,6 +183,15 @@ if submit_button:
             wordware(inputs, prompt_id, api_key)
     else:
         st.warning("Please fill in the location and select valid start and end dates.")
+
+
+
+
+
+
+
+
+
 
 
 # Google Custom Search API details
