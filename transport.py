@@ -79,7 +79,7 @@ ticket_type = form.radio(
     index=None
 )
 
-international_domestic = form.radio(
+travel_type = form.radio(
     "Are you domestic or internation?",
     ["Domestic", "International"], 
     index=None
@@ -100,7 +100,10 @@ if submit_button:
     st.write("Start Date:", start_date)
     st.write("End Date:", end_date)
     st.write("Traveller Type:", ticket_type)
-    st.write("International or Domestic:", international_domestic)
+    st.write("International or Domestic:", travel_type)
+    st.write("Interests:", interests)
+    st.write("Planned Locations:", planned_locations)
+
 
 # Calculate the number of days between the dates
 trip_length = None
@@ -125,6 +128,10 @@ if submit_button:
                 "state": state,
                 "country": country,
                 "trip_length": trip_length,
+                "ticket_type": ticket_type,
+                "travel_type": travel_type,
+                "interests": interests,
+                "planned_locations": planned_locations,
                 "version": "^3.4"  # Add the version information here
 
             }
