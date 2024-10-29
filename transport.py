@@ -75,12 +75,14 @@ end_date = form.date_input("End Date")
 
 ticket_type = form.radio(
     "Traveller Type",
-    ["Adult", "Student", "Senior/Pensioner"]
+    ["Adult", "Student", "Senior/Pensioner"],
+    index=None
 )
 
 international_domestic = form.radio(
     "Are you domestic or internation?",
-    ["Domestic", "International"]
+    ["Domestic", "International"], 
+    index=None
 )
 
 interests = form.text_input("What do you like doing?", 
