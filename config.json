@@ -238,7 +238,7 @@
         "international": {
             "adult": {
                 "images": [
-                    "images/TAS/tas_adult.png",
+                    "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
                 ],
@@ -252,7 +252,7 @@
         "domestic": {
             "adult": {
                 "images": [
-                    "images/TAS/tas_adult.png",
+                    "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
                 ],
@@ -264,7 +264,7 @@
             },
             "student": {
                 "images": [
-                    "images/TAS/concession.png"
+                    "images/TAS/concession.jpg"
                 ],
                 "ticket_names": [
                     "TAS Student Ticket"
@@ -272,14 +272,14 @@
             },
             "senior": {
                 "images": [
-                    "images/TAS/tas_senior.png"
+                    "images/TAS/tas_senior.jpg"
                 ],
                 "ticket_names": [
                     "TAS Senior Ticket"
                 ]
             }
         },
-        "ticket_machine_image": "images/tas_use.png"
+        "ticket_machine_image": "images/tas_use.jpg"
     },
     "Northern Territory": {
         "international": {
