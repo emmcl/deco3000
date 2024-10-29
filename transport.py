@@ -46,7 +46,7 @@ def wordware(inputs, prompt_id, api_key):
         else:
             st.warning("No valid generation found in the response.")
 
-prompt_id = "06f26193-2a37-46c2-971c-c3a2b407b676"
+prompt_id = "a201c977-e13a-4f2b-b7a3-3f47acdcfbd2"
 
 # Create a form
 form = st.form("my_form")
