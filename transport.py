@@ -85,7 +85,7 @@ travel_type = form.radio(
 
 ticket_type = form.radio(
     "Traveller Type",
-    ["Adult", "Student", "Senior/Pensioner"],
+    ["Adult", "Student", "Senior"],
     index=None
 )
 
@@ -120,28 +120,43 @@ else:
     st.write("Please select both start and end dates.")
 
 
+
+# Check if state, travel_type, and ticket_type exist in the config before accessing
+try:
+    images = config[state][travel_type.lower()][ticket_type.lower()]["images"]
+    ticket_names = config[state][travel_type.lower()][ticket_type.lower()]["ticket_names"]
+except KeyError as e:
+    print(f"Error: Invalid key '{e}' - Check if the state, travel type, and ticket type exist in the config.")
+    images, ticket_names = None, None
+
+
 # from chattie 
 
 images = []
 ticket_names = []
 
-# Access the images and ticket names based on inputs
-if travel_type == "International":
-    if ticket_type == "Adult":
-        images = config[state]["international"]["adult"]["images"]
-        ticket_names = config[state]["international"]["adult"]["ticket_names"]
-    # Handle other cases (Student, Senior) as needed
+# Access images and ticket names directly using input values
+images = config[state][travel_type.lower()][ticket_type.lower()]["images"]
+ticket_names = config[state][travel_type.lower()][ticket_type.lower()]["ticket_names"]
 
-elif travel_type == "Domestic":
-    if ticket_type == "Adult":
-        images = config[state]["domestic"]["adult"]["images"]
-        ticket_names = config[state]["domestic"]["adult"]["ticket_names"]
-    elif ticket_type == "Student":
-        images = config[state]["domestic"]["student"]["images"]
-        ticket_names = config[state]["domestic"]["student"]["ticket_names"]
-    elif ticket_type == "Senior":
-        images = config[state]["domestic"]["senior"]["images"]
-        ticket_names = config[state]["domestic"]["senior"]["ticket_names"]
+
+# # Access the images and ticket names based on inputs
+# if travel_type == "International":
+#     if ticket_type == "Adult":
+#         images = config[state]["international"]["adult"]["images"]
+#         ticket_names = config[state]["international"]["adult"]["ticket_names"]
+#     # Handle other cases (Student, Senior) as needed
+
+# elif travel_type == "Domestic":
+#     if ticket_type == "Adult":
+#         images = config[state]["domestic"]["adult"]["images"]
+#         ticket_names = config[state]["domestic"]["adult"]["ticket_names"]
+#     elif ticket_type == "Student":
+#         images = config[state]["domestic"]["student"]["images"]
+#         ticket_names = config[state]["domestic"]["student"]["ticket_names"]
+#     elif ticket_type == "Senior":
+#         images = config[state]["domestic"]["senior"]["images"]
+#         ticket_names = config[state]["domestic"]["senior"]["ticket_names"]
 
 # Display the results in Streamlit
 if images:

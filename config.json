@@ -8,39 +8,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "NSW Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/NSW/nsw_adult.png",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "NSW Domestic Adult Ticket",
+                    "Opal Adult",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/NSW/nsw_concession.png"
+                    "images/NSW/nsw_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "NSW Student Ticket"
+                    "Opal Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/NSW/images/NSW/nsw_senior.png"
+                    "images/NSW/nsw_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "NSW Senior Ticket"
+                    "Opal Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -55,39 +49,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "VIC Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/VIC/vic_adult.png",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "VIC Domestic Adult Ticket",
+                    "myki Adult",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/VIC/concession.png"
+                    "images/VIC/vic_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "VIC Student Ticket"
+                    "myki Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/VIC/vic_senior.png"
+                    "images/VIC/vic_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "VIC Senior Ticket"
+                    "myki Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -102,39 +90,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "QLD Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/QLD/qld_adult.jpg",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "QLD Domestic Adult Ticket",
+                    "Go Adult",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/QLD/concession.jpeg"
+                    "images/QLD/qld_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "QLD Student Ticket"
+                    "Go Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/QLD/qld_senior.png"
+                    "images/QLD/qld_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "QLD Senior Ticket"
+                    "Go Adult",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -149,39 +131,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "WA Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/WA/wa_adult.jpg",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "WA Domestic Adult Ticket",
+                    "SmartRider",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/WA/concession.jpg"
+                    "images/WA/wa_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "WA Student Ticket"
+                    "SmartRider",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/WA/wa_senior.jpg"
+                    "images/WA/wa_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "WA Senior Ticket"
+                    "SmartRider",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -196,39 +172,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "SA Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/SA/sa_adult.png",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "SA Domestic Adult Ticket",
+                    "Metro Card Regular",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/SA/concession.png"
+                    "images/SA/sa_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "SA Student Ticket"
+                    "Metro Card Regular",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/SA/sa_senior.png"
+                    "images/SA/sa_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "SA Senior Ticket"
+                    "Metro Card Regular",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -243,39 +213,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "TAS Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/TAS/tas_adult.jpg",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "TAS Domestic Adult Ticket",
+                    "Green Card",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/TAS/concession.jpg"
+                    "images/TAS/tas_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "TAS Student Ticket"
+                    "Green Card",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/TAS/tas_senior.jpg"
+                    "images/TAS/tas_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "TAS Senior Ticket"
+                    "Green Card",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -294,35 +258,29 @@
                     "Mastercard",
                     "Visa"
                 ]
-            }
-        },
-        "domestic": {
-            "adult": {
+            },
+            "student": {
                 "images": [
                     "images/NT/nt_adult.jpeg",
                     "images/mastercard.png",
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "NT Domestic Adult Ticket",
+                    "NT Adult Ticket",
                     "Mastercard",
                     "Visa"
                 ]
             },
-            "student": {
-                "images": [
-                    "images/NT/concession.jpg"
-                ],
-                "ticket_names": [
-                    "NT Student Ticket"
-                ]
-            },
             "senior": {
                 "images": [
-                    "images/NT/nt_senior.jpeg"
+                    "images/NT/nt_adult.jpeg",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "NT Senior Ticket"
+                    "NT Adult Ticket",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
@@ -337,39 +295,33 @@
                     "images/visa.png"
                 ],
                 "ticket_names": [
-                    "ACT Adult Ticket",
-                    "Mastercard",
-                    "Visa"
-                ]
-            }
-        },
-        "domestic": {
-            "adult": {
-                "images": [
-                    "images/ACT/act_adult.png",
-                    "images/mastercard.png",
-                    "images/visa.png"
-                ],
-                "ticket_names": [
-                    "ACT Domestic Adult Ticket",
+                    "MyWay+",
                     "Mastercard",
                     "Visa"
                 ]
             },
             "student": {
                 "images": [
-                    "images/ACT/concession.png"
+                    "images/ACT/act_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "ACT Student Ticket"
+                    "MyWay+",
+                    "Mastercard",
+                    "Visa"
                 ]
             },
             "senior": {
                 "images": [
-                    "images/ACT/act_senior.png"
+                    "images/ACT/act_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
                 ],
                 "ticket_names": [
-                    "ACT Senior Ticket"
+                    "MyWay+",
+                    "Mastercard",
+                    "Visa"
                 ]
             }
         },
