@@ -111,6 +111,29 @@ if submit_button:
     st.write("Interests:", interests)
     st.write("Planned Locations:", planned_locations)
 
+    images = []
+    ticket_names = []
+        # Ensure state has a valid value before accessing config
+    if state:
+        if state in config:
+            # Nested conditions to access travel type and ticket type
+            if travel_type.lower() in config[state]:
+                if ticket_type.lower() in config[state][travel_type.lower()]:
+                    images = config[state][travel_type.lower()][ticket_type.lower()]["images"]
+                    ticket_names = config[state][travel_type.lower()][ticket_type.lower()]["ticket_names"]
+                else:
+                    st.error(f"Ticket type '{ticket_type}' not found in '{travel_type}' for state '{state}'.")
+            else:
+                st.error(f"Travel type '{travel_type}' not found for state '{state}'.")
+        else:
+            st.error(f"State '{state}' not found in config.")
+    else:
+        st.warning("Please select a valid state.")
+
+    if images:
+        st.image(images, caption=ticket_names,  width=200)
+
+
 
 # Calculate the number of days between the dates
 trip_length = None
@@ -118,54 +141,6 @@ if start_date and end_date:
     trip_length = str((end_date - start_date).days + 1)
 else:
     st.write("Please select both start and end dates.")
-
-
-
-# Check if state, travel_type, and ticket_type exist in the config before accessing
-try:
-    images = config[state][travel_type.lower()][ticket_type.lower()]["images"]
-    ticket_names = config[state][travel_type.lower()][ticket_type.lower()]["ticket_names"]
-except KeyError as e:
-    print(f"Error: Invalid key '{e}' - Check if the state, travel type, and ticket type exist in the config.")
-    images, ticket_names = None, None
-
-
-# from chattie 
-
-images = []
-ticket_names = []
-
-# Access images and ticket names directly using input values
-images = config[state][travel_type.lower()][ticket_type.lower()]["images"]
-ticket_names = config[state][travel_type.lower()][ticket_type.lower()]["ticket_names"]
-
-
-# # Access the images and ticket names based on inputs
-# if travel_type == "International":
-#     if ticket_type == "Adult":
-#         images = config[state]["international"]["adult"]["images"]
-#         ticket_names = config[state]["international"]["adult"]["ticket_names"]
-#     # Handle other cases (Student, Senior) as needed
-
-# elif travel_type == "Domestic":
-#     if ticket_type == "Adult":
-#         images = config[state]["domestic"]["adult"]["images"]
-#         ticket_names = config[state]["domestic"]["adult"]["ticket_names"]
-#     elif ticket_type == "Student":
-#         images = config[state]["domestic"]["student"]["images"]
-#         ticket_names = config[state]["domestic"]["student"]["ticket_names"]
-#     elif ticket_type == "Senior":
-#         images = config[state]["domestic"]["senior"]["images"]
-#         ticket_names = config[state]["domestic"]["senior"]["ticket_names"]
-
-# Display the results in Streamlit
-if images:
-    st.image(images, caption=ticket_names)
-else:
-    st.write("No images found for the selected criteria.")
-
-
-
 
 
 

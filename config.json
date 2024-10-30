@@ -38,6 +38,36 @@
                 ]
             }
         },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/NSW/nsw_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "Opal Adult",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/NSW/nsw_concession.png"
+                ],
+                "ticket_names": [
+                    "Opal Concession"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/NSW/nsw_senior.png"
+                ],
+                "ticket_names": [
+                    "Opal Senior"
+                ]
+            }
+        },
         "ticket_machine_image": "images/nsw_use.jpg"
     },
     "Victoria": {
@@ -76,6 +106,36 @@
                     "myki Adult",
                     "Mastercard",
                     "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/VIC/vic_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "myki Adult",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/VIC/concession.png"
+                ],
+                "ticket_names": [
+                    "myki Concession"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/VIC/vic_senior.png"
+                ],
+                "ticket_names": [
+                    "myki Concession"
                 ]
             }
         },
@@ -120,6 +180,36 @@
                 ]
             }
         },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/QLD/qld_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "Go Adult",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/QLD/concession.jpeg"
+                ],
+                "ticket_names": [
+                    "Go Concession"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/QLD/qld_senior.png"
+                ],
+                "ticket_names": [
+                    "Go Senior"
+                ]
+            }
+        },
         "ticket_machine_image": "images/qld_use.png"
     },
     "Western Australia": {
@@ -158,6 +248,36 @@
                     "SmartRider",
                     "Mastercard",
                     "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/WA/wa_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "SmartRider",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/WA/concession.jpg"
+                ],
+                "ticket_names": [
+                    "SmartRider"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/WA/wa_senior.jpg"
+                ],
+                "ticket_names": [
+                    "SmartRider"
                 ]
             }
         },
@@ -202,6 +322,36 @@
                 ]
             }
         },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/SA/sa_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "Metro Card Regular",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/SA/concession.png"
+                ],
+                "ticket_names": [
+                    "Metro Card Senior"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/SA/sa_senior.png"
+                ],
+                "ticket_names": [
+                    "Seniors Card"
+                ]
+            }
+        },
         "ticket_machine_image": "images/sa_use.jpg"
     },
     "Tasmania": {
@@ -240,6 +390,36 @@
                     "Green Card",
                     "Mastercard",
                     "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/TAS/tas_adult.jpg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "Green Card",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/TAS/concession.jpg"
+                ],
+                "ticket_names": [
+                    "Green Card"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/TAS/tas_senior.jpg"
+                ],
+                "ticket_names": [
+                    "Green Card"
                 ]
             }
         },
@@ -284,6 +464,36 @@
                 ]
             }
         },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/NT/nt_adult.jpeg",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "NT Domestic Adult Ticket",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/NT/concession.jpg"
+                ],
+                "ticket_names": [
+                    "NT Student Ticket"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/NT/nt_senior.jpeg"
+                ],
+                "ticket_names": [
+                    "NT Senior Ticket"
+                ]
+            }
+        },
         "ticket_machine_image": "images/nt_use.png"
     },
     "Australian Capital Territory": {
@@ -322,6 +532,36 @@
                     "MyWay+",
                     "Mastercard",
                     "Visa"
+                ]
+            }
+        },
+        "domestic": {
+            "adult": {
+                "images": [
+                    "images/ACT/act_adult.png",
+                    "images/mastercard.png",
+                    "images/visa.png"
+                ],
+                "ticket_names": [
+                    "MyWay+",
+                    "Mastercard",
+                    "Visa"
+                ]
+            },
+            "student": {
+                "images": [
+                    "images/ACT/concession.png"
+                ],
+                "ticket_names": [
+                    "MyWay+"
+                ]
+            },
+            "senior": {
+                "images": [
+                    "images/ACT/act_senior.png"
+                ],
+                "ticket_names": [
+                    "MyWay+"
                 ]
             }
         },
