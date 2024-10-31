@@ -59,9 +59,9 @@ start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
 travel_type = form.radio("Are you domestic or international?", ["Domestic", "International"], index=None)
 ticket_type = form.radio("Traveller Type", ["Adult", "Student", "Senior"], index=None)
-interests = form.text_input("What do you like doing?", placeholder="e.g., hiking, museums, restaurants")
 planned_locations = form.text_input("Is there any specific destinations you have planned", 
                                     placeholder="e.g., SEALIFE Sydney Aquarium")
+interests = form.text_input("What do you like doing?", placeholder="e.g., hiking, museums, restaurants")
 
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
