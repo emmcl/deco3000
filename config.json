@@ -68,7 +68,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/nsw_use.jpg"
+        "ticket_machine_image": "images/NSW/nsw_use.jpg"
     },
     "Victoria": {
         "international": {
@@ -139,7 +139,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/vic_use.avif"
+        "ticket_machine_image": "images/VIC/vic_use.avif"
     },
     "Queensland": {
         "international": {
@@ -210,7 +210,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/qld_use.png"
+        "ticket_machine_image": "images/QLD/qld_use.png"
     },
     "Western Australia": {
         "international": {
@@ -281,7 +281,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/wa_use.jpeg"
+        "ticket_machine_image": "images/WA/wa_use.jpeg"
     },
     "South Australia": {
         "international": {
@@ -352,7 +352,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/sa_use.jpg"
+        "ticket_machine_image": "images/SA/sa_use.jpg"
     },
     "Tasmania": {
         "international": {
@@ -423,7 +423,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/tas_use.jpg"
+        "ticket_machine_image": "images/Tas/tas_use.jpg"
     },
     "Northern Territory": {
         "international": {
@@ -494,7 +494,7 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/nt_use.png"
+        "ticket_machine_image": "images/NT/nt_use.png"
     },
     "Australian Capital Territory": {
         "international": {
@@ -565,6 +565,6 @@
                 ]
             }
         },
-        "ticket_machine_image": "images/act_use.jpg"
+        "ticket_machine_image": "images/ACT/act_use.jpg"
     }
 }
