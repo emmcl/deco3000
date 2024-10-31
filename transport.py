@@ -101,15 +101,7 @@ ticket_name = "Opal"
 submit_button = form.form_submit_button("Submit")
 # Display submitted data
 if submit_button:
-    st.write("Address:", address)
-    st.write("State:", state)
-    st.write("Country:", country)
-    st.write("Start Date:", start_date)
-    st.write("End Date:", end_date)
-    st.write("Ticket Type:", ticket_type)
-    st.write("Travel Type:", travel_type)
-    st.write("Interests:", interests)
-    st.write("Planned Locations:", planned_locations)
+
 
     images = []
     ticket_names = []
