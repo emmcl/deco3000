@@ -95,8 +95,6 @@ interests = form.text_input("What do you like doing?",
 planned_locations = form.text_input("Is there any specific destinations you have planned", 
     placeholder="eg. SEALIFE Sydney Aquarium")
 
-ticket_name = "Opal"
-
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
 # Display submitted data
@@ -157,7 +155,8 @@ if submit_button:
                 "travel_type": travel_type,
                 "interests": interests,
                 "planned_locations": planned_locations,
-                "ticket_name": ticket_name,
+                "ticket_names": ticket_names,
+                "images": images,
                 "version": "^3.4"  # Add the version information here
 
             }
