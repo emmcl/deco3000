@@ -6,6 +6,7 @@ import json
 import requests
 
 st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
+st.header("Ask A Question :heavy_exclamation_mark::question:", divider="blue")
     
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):

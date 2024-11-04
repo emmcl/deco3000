@@ -10,6 +10,7 @@ with open('config.json', 'r') as file:
     config = json.load(file)
 
 st.page_link("Ticket_Translator.py", label="Go Home", icon="🏠")
+st.header("Travel Inspiration Hub :round_pushpin:", divider="blue")
     
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):
