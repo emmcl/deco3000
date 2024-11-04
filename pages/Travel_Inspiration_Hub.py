@@ -62,7 +62,7 @@ interests = form.text_input("What do you like doing?", placeholder="e.g., hiking
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
 
-prompt_id_recommendation = "e6209b33-9bf2-4e31-adcf-317f0fdccec5"  # First generation for ticket recommendation
+prompt_id_recommendation = "acea7b7a-141b-4982-bc48-b2a71c4b13a1"  # First generation for ticket recommendation
 
 
 # Inside the submit button logic
