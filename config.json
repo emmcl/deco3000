@@ -2,7 +2,7 @@
     "New South Wales": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -14,7 +14,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -26,7 +26,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -40,7 +40,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -52,7 +52,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_concession.png"
                 ],
                 "ticket_names": [
@@ -60,7 +60,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/NSW/nsw_senior.png"
                 ],
                 "ticket_names": [
@@ -73,7 +73,7 @@
     "Victoria": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/vic_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -85,7 +85,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/vic_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -97,7 +97,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/vic_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -111,7 +111,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/vic_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -123,7 +123,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/concession.png"
                 ],
                 "ticket_names": [
@@ -131,7 +131,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/VIC/vic_senior.png"
                 ],
                 "ticket_names": [
@@ -144,7 +144,7 @@
     "Queensland": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/qld_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -156,7 +156,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/qld_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -168,7 +168,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/qld_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -182,7 +182,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/qld_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -194,7 +194,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/concession.jpeg"
                 ],
                 "ticket_names": [
@@ -202,7 +202,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/QLD/qld_senior.png"
                 ],
                 "ticket_names": [
@@ -215,7 +215,7 @@
     "Western Australia": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/WA/wa_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -227,7 +227,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/WA/wa_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -239,7 +239,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/WA/wa_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -253,7 +253,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/WA/wa_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -265,7 +265,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/WA/concession.jpg"
                 ],
                 "ticket_names": [
@@ -273,7 +273,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/WA/wa_senior.jpg"
                 ],
                 "ticket_names": [
@@ -286,7 +286,7 @@
     "South Australia": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/SA/sa_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -298,7 +298,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/SA/sa_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -310,7 +310,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/SA/sa_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -324,7 +324,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/SA/sa_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -336,7 +336,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/SA/concession.png"
                 ],
                 "ticket_names": [
@@ -344,7 +344,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/SA/sa_senior.png"
                 ],
                 "ticket_names": [
@@ -357,7 +357,7 @@
     "Tasmania": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -369,7 +369,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -381,7 +381,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -395,7 +395,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/tas_adult.jpg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -407,7 +407,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/concession.jpg"
                 ],
                 "ticket_names": [
@@ -415,7 +415,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/TAS/tas_senior.jpg"
                 ],
                 "ticket_names": [
@@ -428,7 +428,7 @@
     "Northern Territory": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/NT/nt_adult.jpeg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -440,7 +440,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/NT/nt_adult.jpeg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -452,7 +452,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/NT/nt_adult.jpeg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -466,7 +466,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/NT/nt_adult.jpeg",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -478,7 +478,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/NT/concession.jpg"
                 ],
                 "ticket_names": [
@@ -486,7 +486,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/NT/nt_senior.jpeg"
                 ],
                 "ticket_names": [
@@ -499,7 +499,7 @@
     "Australian Capital Territory": {
         "international": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/act_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -511,7 +511,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/act_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -523,7 +523,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/act_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -537,7 +537,7 @@
         },
         "domestic": {
             "adult": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/act_adult.png",
                     "images/mastercard.png",
                     "images/visa.png"
@@ -549,7 +549,7 @@
                 ]
             },
             "student": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/concession.png"
                 ],
                 "ticket_names": [
@@ -557,7 +557,7 @@
                 ]
             },
             "senior": {
-                "images": [
+                "ticket_images": [
                     "images/ACT/act_senior.png"
                 ],
                 "ticket_names": [

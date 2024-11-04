@@ -68,14 +68,14 @@ submit_button = form.form_submit_button("Submit")
 
 # Inside the submit button logic
 if submit_button:
-    images, ticket_names, ticket_machine_image = [], [], None
+    ticket_images, ticket_names, ticket_machine_image = [], [], None
 
-    # Retrieve images and ticket names based on config
+    # Retrieve ticket_images and ticket names based on config
     travel_key = travel_type.lower()
     ticket_key = ticket_type.lower()
 
     if state in config and travel_key in config[state] and ticket_key in config[state][travel_key]:
-        images = config[state][travel_key][ticket_key]["images"]
+        ticket_images = config[state][travel_key][ticket_key]["ticket_images"]
         ticket_names = config[state][travel_key][ticket_key]["ticket_names"]
         ticket_machine_image = config[state]["ticket_machine_image"]
     else:
@@ -110,9 +110,9 @@ if submit_button:
         if recommendation_output:
             st.write(recommendation_output)
 
-            # Display images and captions only after the first generation output
-            if images:
-                st.image(images, caption=ticket_names, width=200)
+            # Display ticket_images and captions only after the first generation output
+            if ticket_images:
+                st.image(ticket_images, caption=ticket_names, width=200)
 
         # Prepare inputs for ticket use generation
         inputs_use = {
