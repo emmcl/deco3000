@@ -114,4 +114,4 @@ if submit_button:
 
 
     # potential chatbot
-st.page_link(label="Need more help.. Ask a question here", page="pages/Ask_A_Question.py")
+st.page_link(label="If you need more help... ask a question here!", page="pages/Ask_A_Question.py", icon="⁉️")

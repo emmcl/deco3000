@@ -46,14 +46,16 @@ prompt_id_chatbot = "f0be2817-61f3-4bc0-99d9-7cafe536829f"
 
 form = st.form("form")
 
-question_state = form.selectbox("Select a State", ["New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="e.g., New South Wales")
-question_input = form.text_input("Enter your question", placeholder="e.g., What are the best places to visit?")
+state = form.selectbox("Select a State", ["New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="e.g., New South Wales")
+country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="e.g., Australia")
+question = form.text_input("Enter your question", placeholder="e.g., What are the best places to visit?")
 question_submit = form.form_submit_button("Submit")
 
 if question_submit:
     inputs_chatbot = {
-        "state": question_state,
-        "question": question_input
+        "state": state,
+        "country": country,
+        "question": question
     }
     question_output = wordware(inputs_chatbot, prompt_id_chatbot, api_key)
     if question_output:
