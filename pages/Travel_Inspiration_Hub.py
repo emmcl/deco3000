@@ -61,7 +61,6 @@ interests = form.text_input("What do you like doing?", placeholder="e.g., hiking
 
 # Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
-
 prompt_id_recommendation = "acea7b7a-141b-4982-bc48-b2a71c4b13a1"  # First generation for ticket recommendation
 
 
@@ -87,7 +86,6 @@ if submit_button:
         "planned_locations": planned_locations,
         "version": "^3.4"
     }
-    print(inputs)
     # First generation: Ticket recommendation
     # recommendation_output = wordware(inputs, prompt_id_recommendation, api_key)
     # if recommendation_output:
@@ -112,4 +110,4 @@ if submit_button:
 
 
     # potential chatbot
-st.page_link(label="If you need more help... ask a question here!", page="pages/Ask_A_Question.py", icon="⁉️")
+st.page_link(label="If you need more help... ask a question here!", page="pages/Question_Hub.py", icon="⁉️")

@@ -6,7 +6,7 @@ import json
 import requests
 
 st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
-st.header("Ask A Question :heavy_exclamation_mark::question:", divider="blue")
+st.header("Question Hub :speech_balloon:", divider="blue")
     
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):
@@ -42,8 +42,9 @@ def wordware(inputs, prompt_id, api_key):
 # Load environment variables from the .env file to get API KEY 
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
-prompt_id_chatbot = "f0be2817-61f3-4bc0-99d9-7cafe536829f"
-# PROMPT:You are acting as a basic chatbot, using the location of @state in Australia. Find the relevant public transport authority and answer the @question from the user in 1-2 sentences.
+# prompt_id_chatbot = "f0be2817-61f3-4bc0-99d9-7cafe536829f"
+prompt_id_chatbot = "4f2750ba-701a-4bc9-8b4c-8fed50dd2f92"
+# PROMPT:You are acting as a basic chatbot, using the location of @state in @country . Find the relevant public transport authority and answer the @question from the user in 1-2 sentences.
 
 form = st.form("form")
 
