@@ -68,9 +68,10 @@ ticket_type = form.radio("Traveller Type", ["Adult", "Student", "Senior"], index
 submit_button = form.form_submit_button("Submit")
 
       
-prompt_id_recommendation = "38a4bff8-60c9-4498-9fcb-23146d64187e"  # First generation for ticket recommendation
-prompt_id_use = "322d5421-8fba-4ac2-ae39-8b4e995c05b9"  # Second generation for ticket use
-prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  # Third generation for ticket use
+# prompt_id_recommendation = "38a4bff8-60c9-4498-9fcb-23146d64187e"  # First generation for ticket recommendation
+# prompt_id_use = "322d5421-8fba-4ac2-ae39-8b4e995c05b9"  # Second generation for ticket use
+# prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  # Third generation for ticket use
+prompt_id_recommendation ="1dc1658e-3575-40e0-928a-11ca47616c6c"
 
 if submit_button:
     ticket_images, ticket_names, ticket_machine_image = [], [], None
@@ -96,7 +97,7 @@ if submit_button:
         "version": "^3.4"
     }
 
-    # First generation: Ticket recommendation
+    # # First generation: Ticket recommendation
     recommendation_output = wordware(inputs, prompt_id_recommendation, api_key)
     if recommendation_output:
         st.write(recommendation_output)
@@ -104,18 +105,18 @@ if submit_button:
         if ticket_images:
             st.image(ticket_images, caption=ticket_names, width=200)
 
-    # Second generation: Ticket use
-    use_output = wordware(inputs, prompt_id_use, api_key)
-    if use_output:
-        st.write(use_output)
-        # Display ticket machine image after second generation output
-        if ticket_machine_image:
-            st.image(ticket_machine_image, caption="Ticket Activation Machine")
+    # # Second generation: Ticket use
+    # use_output = wordware(inputs, prompt_id_use, api_key)
+    # if use_output:
+    #     st.write(use_output)
+    #     # Display ticket machine image after second generation output
+    #     if ticket_machine_image:
+    #         st.image(ticket_machine_image, caption="Ticket Activation Machine")
 
-    # Second generation: Ticket use
-    terms_output = wordware(inputs, prompt_id_terms, api_key)
-    if terms_output:
-        st.write(terms_output)
+    # # Second generation: Ticket use
+    # terms_output = wordware(inputs, prompt_id_terms, api_key)
+    # if terms_output:
+    #     st.write(terms_output)
 
     # potential chatbot
 st.page_link(label="If you need more help... ask a question here!", page="pages/Ask_A_Question.py", icon="⁉️")
