@@ -5,13 +5,6 @@ from dotenv import load_dotenv
 import json
 import requests
 
-# Load config.json
-with open('config.json', 'r') as file:
-    config = json.load(file)
-
-st.page_link("Ticket_Translator.py", label="Go Home", icon="🏠")
-st.header("Travel Inspiration Hub :round_pushpin:", divider="blue")
-    
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):
     try:
@@ -43,28 +36,30 @@ def wordware(inputs, prompt_id, api_key):
                         st.error("Error decoding NDJSON response.")
         return final_output
 
-# Load environment variables from the .env file to get API KEY 
+# load environment variables from the .env file to get API KEY 
+# for this submission you can find the WORDWARE_API_KEY in a .txt file in the .zip folder or use your own
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
 
-# Create a form
-form = st.form("my_form")
+# heading and link back to home for navigation
+st.page_link("Ticket_Translator.py", label="Go Home", icon="🏠")
+st.header("Travel Inspiration Hub :round_pushpin:", divider="blue")
 
-address = form.text_input("Enter your location street address", placeholder="e.g., 38 Princes Hwy, St Peters")
-state = form.selectbox("Select a State", ["New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", 
-                                          "South Australia", "Northern Territory"], index=None, placeholder="e.g., New South Wales")
-country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="e.g., Australia")
+# set up streamilt form for user inputs 
+form = st.form("my_form")
+address = form.text_input("Enter your location street address", placeholder="eg. 1 Main Street, Sydney")
+state = form.selectbox("Select a State", ["New South Wales", "Victoria", "Australian Capital Territory", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="eg. New South Wales")
+country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="eg. Australia")
 start_date = form.date_input("Start Date")
 end_date = form.date_input("End Date")
-planned_locations = form.text_input("Is there any specific destinations you have planned", placeholder="e.g., SEALIFE Sydney Aquarium")
-interests = form.text_input("What do you like doing?", placeholder="e.g., hiking, museums, restaurants")
-
-# Add a submit button to the form
+planned_locations = form.text_input("Is there any specific destinations you have planned", placeholder="eg. SEALIFE Sydney Aquarium")
+interests = form.text_input("What do you like doing?", placeholder="eg. hiking, museums, restaurants")
 submit_button = form.form_submit_button("Submit")
+
+# prompt id to be given to wordware
 prompt_id_recommendation = "acea7b7a-141b-4982-bc48-b2a71c4b13a1"  # First generation for ticket recommendation
 
-
-# Inside the submit button logic
+# on submit, set up variables for wordware function
 if submit_button:
     # Calculate trip length
     trip_length = None
@@ -76,7 +71,7 @@ if submit_button:
     else:
         st.warning("Please select both start and end dates.")
 
-    # Prepare inputs for recommendation generation and display output
+    # set up variables for wordware function
     inputs = {
         "address": address,
         "state": state,
@@ -86,28 +81,10 @@ if submit_button:
         "planned_locations": planned_locations,
         "version": "^3.4"
     }
-    # First generation: Ticket recommendation
-    # recommendation_output = wordware(inputs, prompt_id_recommendation, api_key)
-    # if recommendation_output:
-    #     st.write(recommendation_output)
 
-    # # Second generation: Ticket use
-    # use_output = wordware(inputs, prompt_id_use, api_key)
-    # if use_output:
-    #     st.write(use_output)
-
-    # # Second generation: Ticket use
-    # terms_output = wordware(inputs, prompt_id_terms, api_key)
-    # if terms_output:
-    #     st.write(terms_output)
-
-    # i've simplified the above, just need to test if it works 
     recommendation_output = wordware(inputs, prompt_id_recommendation, api_key)
     if recommendation_output:
         st.write(recommendation_output)
-    else:
-        st.write('One or more of the wordware prompts produced "null"')
 
-
-    # potential chatbot
+# link to chatbot 
 st.page_link(label="If you need more help... ask a question here!", page="pages/Question_Hub.py", icon="⁉️")

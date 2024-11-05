@@ -5,20 +5,6 @@ from dotenv import load_dotenv
 import json
 import requests
 
-st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
-st.header("Transport Ticket Hub :tram:", divider="blue")
-    
-import streamlit as st
-from datetime import date
-import os
-from dotenv import load_dotenv
-import json
-import requests
-
-# Load config.json
-with open('config.json', 'r') as file:
-    config = json.load(file)
-    
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):
     try:
@@ -50,33 +36,39 @@ def wordware(inputs, prompt_id, api_key):
                         st.error("Error decoding NDJSON response.")
         return final_output
 
-# Load environment variables from the .env file to get API KEY 
+# load environment variables from the .env file to get API KEY 
+# for this submission you can find the WORDWARE_API_KEY in a .txt file in the .zip folder or use your own
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
 
-# Create a form
-form = st.form("my_form")
+# load config.json
+with open('config.json', 'r') as file:
+    config = json.load(file)
+    
+# heading and link back to home for navigation
+st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
+st.header("Transport Ticket Hub :tram:", divider="blue")
 
-address = form.text_input("Enter your location street address", placeholder="e.g., 38 Princes Hwy, St Peters")
-state = form.selectbox("Select a State", ["New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", 
-                                          "South Australia", "Northern Territory"], index=None, placeholder="e.g., New South Wales")
-country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="e.g., Australia")
+# set up streamilt form for user inputs 
+form = st.form("my_form")
+state = form.selectbox("Select a State", ["New South Wales", "Victoria", "Australian Capital Territory", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="eg., New South Wales")
+country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="eg. Australia")
 travel_type = form.radio("Are you domestic or international?", ["Domestic", "International"], index=None)
 ticket_type = form.radio("Traveller Type", ["Adult", "Student", "Senior"], index=None)
-
-# Add a submit button to the form
 submit_button = form.form_submit_button("Submit")
 
-      
+# prompt ids to be given to wordware
 prompt_id_recommendation = "38a4bff8-60c9-4498-9fcb-23146d64187e"  # First generation for ticket recommendation
+# PROMPT:
 prompt_id_use = "322d5421-8fba-4ac2-ae39-8b4e995c05b9"  # Second generation for ticket use
-prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  # Third generation for ticket use
-# prompt_id_recommendation ="1dc1658e-3575-40e0-928a-11ca47616c6c"
+# PROMPT:
+prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  # Third generation for ticket terms
+# PROMPT: 
 
+# on submit, set up variables for wordware function
 if submit_button:
+    # retrieve ticket_images and ticket names based on config
     ticket_images, ticket_names, ticket_machine_image = [], [], None
-
-    # Retrieve ticket_images and ticket names based on config
     travel_key = travel_type.lower()
     ticket_key = ticket_type.lower()
 
@@ -87,9 +79,8 @@ if submit_button:
     else:
         st.error("Selection not found in config.")
     
-    # Prepare inputs for generation and display output
+# set up variables for wordware function
     inputs = {
-        "address": address,
         "state": state,
         "country": country,
         "ticket_type": ticket_type,
@@ -97,26 +88,26 @@ if submit_button:
         "version": "^3.4"
     }
 
-    # # First generation: Ticket recommendation
+    # first generation: ticket recommendation
     recommendation_output = wordware(inputs, prompt_id_recommendation, api_key)
     if recommendation_output:
         st.write(recommendation_output)
-        # Display ticket_images and captions only after the first generation output
+        # display ticket_images and captions from config.JSON
         if ticket_images:
             st.image(ticket_images, caption=ticket_names, width=200)
 
-    # Second generation: Ticket use
+    # second generation: ticket use
     use_output = wordware(inputs, prompt_id_use, api_key)
     if use_output:
         st.write(use_output)
-        # Display ticket machine image after second generation output
+        # display ticket machine image from config.JSON
         if ticket_machine_image:
             st.image(ticket_machine_image, caption="Ticket Activation Machine")
 
-    # Second generation: Ticket use
+    # third generation: ticket terms
     terms_output = wordware(inputs, prompt_id_terms, api_key)
     if terms_output:
         st.write(terms_output)
 
-    # potential chatbot
+# link to chatbot 
 st.page_link(label="If you need more help... ask a question here!", page="pages/Question_Hub.py", icon="⁉️")

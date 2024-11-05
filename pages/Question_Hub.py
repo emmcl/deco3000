@@ -5,9 +5,6 @@ from dotenv import load_dotenv
 import json
 import requests
 
-st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
-st.header("Question Hub :speech_balloon:", divider="blue")
-    
 # define the wordware function 
 def wordware(inputs, prompt_id, api_key):
     try:
@@ -39,29 +36,37 @@ def wordware(inputs, prompt_id, api_key):
                         st.error("Error decoding NDJSON response.")
         return final_output
 
-# Load environment variables from the .env file to get API KEY 
+# load environment variables from the .env file to get API KEY 
+# for this submission you can find the WORDWARE_API_KEY in a .txt file in the .zip folder or use your own
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
-# prompt_id_chatbot = "f0be2817-61f3-4bc0-99d9-7cafe536829f"
-prompt_id_chatbot = "4f2750ba-701a-4bc9-8b4c-8fed50dd2f92"
-# PROMPT:You are acting as a basic chatbot, using the location of @state in @country . Find the relevant public transport authority and answer the @question from the user in 1-2 sentences.
 
+# heading and link back to home for navigation
+st.page_link("Ticket_Translator.py", label=" Go Home", icon="🏠")
+st.header("Question Hub :speech_balloon:", divider="blue")
+
+# set up streamilt form for user inputs 
 form = st.form("form")
+state = form.selectbox("Select a State", ["New South Wales", "Victoria", "Australian Capital Territory", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="eg. New South Wales")
+country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="eg. Australia")
+question = form.text_input("Enter your question", placeholder="eg., What are the best places to visit?")
+submit_button = form.form_submit_button("Submit")
 
-state = form.selectbox("Select a State", ["New South Wales", "Victoria", "ACT", "Queensland", "Tasmania", "Western Australia", "South Australia", "Northern Territory"], index=None, placeholder="e.g., New South Wales")
-country = form.selectbox("Select a Country", ["Australia"], index=None, placeholder="e.g., Australia")
-question = form.text_input("Enter your question", placeholder="e.g., What are the best places to visit?")
-question_submit = form.form_submit_button("Submit")
+# prompt id to be given to wordware
+prompt_id_chatbot = "4f2750ba-701a-4bc9-8b4c-8fed50dd2f92"
+# PROMPT: You are acting as a basic chatbot, using the location of @state in @country . Find the relevant public transport authority and answer the @question from the user in 1-2 sentences.
 
-if question_submit:
+# on submit, set up variables for wordware function
+if submit_button:
+
+# set up variables for wordware function
     inputs_chatbot = {
         "state": state,
         "country": country,
         "question": question
     }
+    # write output from wordware to the user
     question_output = wordware(inputs_chatbot, prompt_id_chatbot, api_key)
     if question_output:
         st.subheader("To answer your question:")
         st.write(question_output)
-    else:
-        st.error("No response generated for the question.")
