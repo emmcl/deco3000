@@ -38,6 +38,7 @@ def wordware(inputs, prompt_id, api_key):
 
 # load environment variables from the .env file to get API KEY 
 # for this submission you can find the WORDWARE_API_KEY in a .txt file in the .zip folder or use your own
+# but it's accessed through .env so you'll still need to make the .env and paste it there
 load_dotenv()
 api_key = os.getenv('WORDWARE_API_KEY')
 

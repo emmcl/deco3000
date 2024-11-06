@@ -21,7 +21,8 @@ In your terminal, install the necessary packages:
 You will need to create a `.env` file in the root directory with the following:
 WORDWARE_API_KEY=your_key_here
 
-- Kaz & Alton you'll find ours in a .txt file in the zip folder or you can use your own
+- Kaz & Alton you'll find ours in a .txt file in the zip folder or you can use your own 
+- But you will still need to make the .env file and paste it there
 
 ## Running The Program 
 In your terminal: 
