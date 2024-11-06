@@ -54,7 +54,6 @@ submit_button = form.form_submit_button("Submit")
 
 # prompt id to be given to wordware
 prompt_id_chatbot = "4f2750ba-701a-4bc9-8b4c-8fed50dd2f92"
-# PROMPT: You are acting as a basic chatbot, using the location of @state in @country . Find the relevant public transport authority and answer the @question from the user in 1-2 sentences.
 
 # on submit, set up variables for wordware function
 if submit_button:

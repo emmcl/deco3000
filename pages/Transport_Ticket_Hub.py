@@ -57,13 +57,12 @@ travel_type = form.radio("Are you domestic or international?", ["Domestic", "Int
 ticket_type = form.radio("Traveller Type", ["Adult", "Student", "Senior"], index=None)
 submit_button = form.form_submit_button("Submit")
 
-# prompt ids to be given to wordware
-prompt_id_recommendation = "38a4bff8-60c9-4498-9fcb-23146d64187e"  # First generation for ticket recommendation
-# PROMPT:
-prompt_id_use = "322d5421-8fba-4ac2-ae39-8b4e995c05b9"  # Second generation for ticket use
-# PROMPT:
-prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  # Third generation for ticket terms
-# PROMPT: 
+# prompt id - first generation for ticket recommendation
+prompt_id_recommendation = "38a4bff8-60c9-4498-9fcb-23146d64187e" 
+# prompt id - second generation for ticket use
+prompt_id_use = "322d5421-8fba-4ac2-ae39-8b4e995c05b9"  
+# prompt id - third generation for ticket terms
+prompt_id_terms = "9d417150-c210-4151-9850-ad97a3bd0c56"  
 
 # on submit, set up variables for wordware function
 if submit_button:

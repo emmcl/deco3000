@@ -57,7 +57,7 @@ interests = form.text_input("What do you like doing?", placeholder="eg. hiking, 
 submit_button = form.form_submit_button("Submit")
 
 # prompt id to be given to wordware
-prompt_id_recommendation = "acea7b7a-141b-4982-bc48-b2a71c4b13a1"  # First generation for ticket recommendation
+prompt_id_recommendation = "acea7b7a-141b-4982-bc48-b2a71c4b13a1" 
 
 # on submit, set up variables for wordware function
 if submit_button:
